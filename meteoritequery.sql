@@ -50,3 +50,10 @@ ORDER BY year
 SELECT name, mass
 FROM meteoriteFell
 WHERE name LIKE 'C%'
+
+-- This table shows the number of meteorites that were seen falling per country
+
+SELECT country, COUNT(id) AS "metpercountry"
+FROM location
+GROUP BY country
+ORDER BY country
